@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "_Layout";
+}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Todo List</h1>
+    <form class="row g-3">
+      <div class="col">
+        <input type="text" class="form-control" id="newText" placeholder="Add task...">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">+</button>
+      </div>
+    </form>
+    <p><h3>My Tasks</h3></p>
+    <ul class="list-group">
+        <div class="container">
+            @{
+                int color = 0;
+                string[] degrade = { "list-group-item-dark", "list-group-item-light" };
+                List<string> myTasks = new List<string>();
+                myTasks.Add("Comprar abacaxi");
+                myTasks.Add("Comprar pirulito");
+                myTasks.Add("Comprar batatas");
+                myTasks.Add("Comprar alface");
+
+                foreach (string itemLista in myTasks)
+                {
+                    <li class="list-group-item @degrade[ color ]"> <!--Razor here-->
+                        <div class="row">
+                            <div class="col">
+                                @itemLista  <!--Razor here-->
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </li>
+                    color = (color == 0) ? 1 : 0;
+                }
+            }
+        </div>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

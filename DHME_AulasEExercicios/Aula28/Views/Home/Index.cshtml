@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "App Escola";
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula28 - 13/07/2022 - Room9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <h1>App Escola</h1>
+    <form class="row g-3">
+        <div class="col">
+            <input type="text" class="form-control" id="newText" placeholder="Digite o nome do aluno...">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Search</button>
+        </div>
+    </form>
+    <p><h3>#1 Turma</h3></p>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Sobrenome</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    /*A dictionary of strings, with a key = string*/
+                    Dictionary<string, string> statusAluno = new Dictionary<string, string>()
+                    {
+                        { "Aprovado", "" },
+                        { "Reprovado", "table-danger" },
+                        { "Recuperacao", "table-warning" }
+                    };
+                    /* A dictionary of Tuples*/
+                    Dictionary<int, (string nome, string sobrenome, string status)> listOfStudents = new Dictionary<int, (string nome, string sobrenome, string status)>();
+
+                    listOfStudents.Add(1, ("Willian", "Sant Anna", "Reprovado"));
+                    listOfStudents.Add(2, ("Thiago", "Machado", "Aprovado"));
+                    listOfStudents.Add(3, ("Rodrigo", "Braga", "Aprovado"));
+                    listOfStudents.Add(4, ("Caroline", "da Silva", "Recuperacao"));
+
+                    foreach(var item in listOfStudents) 
+                    {
+                        <tr class="@statusAluno[@item.Value.status]">
+                            <th scope="row">@item.Key</th>
+                            <td>@item.Value.nome</td>
+                            <td>@item.Value.sobrenome</td>
+                            <td>@item.Value.status</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+</html>

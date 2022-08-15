@@ -1,0 +1,94 @@
+﻿<Window x:Class="Aula16Atividade1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula16Atividade1"
+        mc:Ignorable="d"
+        Icon="/favicon.png"
+        Title="Sem título - Bloco de notas" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Menu HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+            <MenuItem Header="Arquivo">
+                <MenuItem Header="Novo"/>
+                <MenuItem Header="Nova Janela"/>
+                <MenuItem Header="Abrir"/>
+                <MenuItem Header="Salvar"/>
+                <MenuItem Header="Salvar como"/>
+                <Separator/>
+                <MenuItem Header="Configurar página"/>
+                <MenuItem Header="Imprimir"/>
+                <Separator/>
+                <MenuItem Header="Sair"/>
+            </MenuItem>
+        </Menu>
+
+        <Menu HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            <MenuItem Header="Editar"/>
+        </Menu>
+        <Menu HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+            <MenuItem Header="Exibir">
+                <MenuItem Header="Ampliar">
+                    <MenuItem Header="Ampliar zoom"/>
+                    <MenuItem Header="Reduzir"/>
+                    <MenuItem Header="Restaurar zoom padrão"/>
+                </MenuItem>
+                <MenuItem Header="Barra de status"/>
+                <MenuItem Header="Quebra automática de linha"/>
+            </MenuItem>
+        </Menu>
+        <Menu HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="11">
+            <MenuItem Header="" Width="26" Height="56" >
+                <MenuItem.Icon>
+                    <Image Source="/engrenagem.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </Menu>
+        
+    </Grid>
+</Window>
+    
+    
+<!--<Window x:Class="Aula16_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aula16_WPF"
+        mc:Ignorable="d"
+        Title="Mercado Eletrônico" 
+        Height="450" 
+        Width="800" 
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</--><!--Window>-->

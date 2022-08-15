@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "secao3-exercicios1-estrutura-sequencial", "secao3-exercicios1-estrutura-sequencial\secao3-exercicios1-estrutura-sequencial.csproj", "{58290791-2380-4E53-B790-FB5EBBC71DA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "secao4-aula01-classe-atributo-metodo-triangulo", "secao4-aula01-classe-atributo-metodo-triangulo\secao4-aula01-classe-atributo-metodo-triangulo.csproj", "{23BE24BC-581E-436D-ABC9-5EC594D565BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "secao4-fixacao-nome-idade", "secao4-fixacao-nome-idade\secao4-fixacao-nome-idade.csproj", "{645133D9-3FF6-42C5-95D8-D73F0D92F857}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "secao4-fixacao-nome-salario", "secao4-fixacao-nome-salario\secao4-fixacao-nome-salario.csproj", "{14F30C1E-71AD-4990-9071-6CE1F1EEC5AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "secao4-fixacao-classes-atributos-e-metodos", "secao4-fixacao-classes-atributos-e-metodos\secao4-fixacao-classes-atributos-e-metodos.csproj", "{31990C28-3B20-4B22-8892-6D0C87C15010}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58290791-2380-4E53-B790-FB5EBBC71DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58290791-2380-4E53-B790-FB5EBBC71DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58290791-2380-4E53-B790-FB5EBBC71DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58290791-2380-4E53-B790-FB5EBBC71DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BE24BC-581E-436D-ABC9-5EC594D565BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BE24BC-581E-436D-ABC9-5EC594D565BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BE24BC-581E-436D-ABC9-5EC594D565BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BE24BC-581E-436D-ABC9-5EC594D565BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645133D9-3FF6-42C5-95D8-D73F0D92F857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645133D9-3FF6-42C5-95D8-D73F0D92F857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645133D9-3FF6-42C5-95D8-D73F0D92F857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645133D9-3FF6-42C5-95D8-D73F0D92F857}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F30C1E-71AD-4990-9071-6CE1F1EEC5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F30C1E-71AD-4990-9071-6CE1F1EEC5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F30C1E-71AD-4990-9071-6CE1F1EEC5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F30C1E-71AD-4990-9071-6CE1F1EEC5AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31990C28-3B20-4B22-8892-6D0C87C15010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31990C28-3B20-4B22-8892-6D0C87C15010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31990C28-3B20-4B22-8892-6D0C87C15010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31990C28-3B20-4B22-8892-6D0C87C15010}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C57A490-6602-4221-999C-89D6747456E5}
+	EndGlobalSection
+EndGlobal
