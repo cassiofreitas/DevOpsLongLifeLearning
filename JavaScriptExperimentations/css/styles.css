@@ -1,0 +1,36 @@
+/*** JavaScript demonstration ***/
+/*** https: //developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents  **/
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#square {
+    width: 20em;
+    height: 20em;
+    border: 2px inset gray;
+    margin-bottom: 1em;
+}
+
+#meuconsole {
+    width: 20em;
+    height: 20em;
+    border: 3px inset greenyellow;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: .5em 2em;
+}
+
+#pedroFala {
+    background-color: cornflowerblue;
+    font-weight: bolder;
+    color: beige;
+}
+
+#classeTelha {
+     background-color: rgb(166, 237, 100);
+     font-weight: bolder;
+     color:chocolate;
+ }

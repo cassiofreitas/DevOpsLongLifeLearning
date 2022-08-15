@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "43c4f73b-a3f6-48c3-975a-992054fa94a9",
+		"name": "WebAPIContosoPizzaSQLite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21974831"
+	},
+	"item": [
+		{
+			"name": "Request all Coupons list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7216/coupon",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7216",
+					"path": [
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

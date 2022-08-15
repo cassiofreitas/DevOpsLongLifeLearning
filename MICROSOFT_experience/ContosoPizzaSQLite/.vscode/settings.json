@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "ContosoPizza\\bin\\Release\\net6.0\\publish",
+    "appService.defaultWebAppToDeploy": "/subscriptions/e4803b92-a652-4544-b496-05fe3af767ec/microsoft.web/sites/subscriptions/e4803b92-a652-4544-b496-05fe3af767ec/resourceGroups/Microsoft-Learn/providers/Microsoft.Web/sites/ContosoPizzaSQLite"
+}

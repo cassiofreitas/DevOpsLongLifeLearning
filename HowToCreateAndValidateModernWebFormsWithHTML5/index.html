@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootcamp Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--  Not from original article-->
+    <meta name="description" content="How to Create and Validate Modern Web Forms with HTML5.">
+    <meta name="author" content="Ophy Boamah">
+
+    <meta property="og:title" content="How to Create and Validate Modern Web Forms with HTML5.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.freecodecamp.org/news/author/ophelia/">
+    <meta property="og:description" content="How to Create and Validate Modern Web Forms with HTML5">
+    <meta property="og:image" content="image.png">
+</head>
+
+<body>
+    <div class="form">
+        <h1>Bootcamp Registration Form</h1>
+        <p>Complete this form to express your interest in the upcoming web development bootcamp.</p>
+        <form>
+            <!-- Contact Details -->
+            <fieldset class="first-section">
+                <legend>Contact Details</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autofocus placeholder="Ophy Boamah" autocomplete="on" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="ob2@hotmail.com">
+                <br><br>
+                <label for="tel">Phone</label>
+                <input type="tel" id="tel" placeholder="+233 200001212">
+                <br><br>
+            </fieldset>
+            <!-- Personal Information -->
+            <fieldset class="second-section">
+                <legend>Personal Information</legend>
+                <label for="dob">Birth Date</label>
+                <input type="date" id="dob">
+                <br><br>
+                <label for="gender">Gender ??</label>
+                <input list="genders" name="gender" id="gender">
+                <datalist id="genders">
+                    <option value="female">
+                    <option value="male">
+                    <option value="other">
+                </datalist>
+                <br><br>
+                <div class="proficiency">
+                    <label for="profeciency">Proficiency</label>
+                    <input type="range" value="4" max="10" id="profeciency" name="profeciency">
+                </div>
+            </fieldset>
+            <!-- Preferred Language -->
+            <div class="terms">
+                <label for="scales">I have read and agree to the terms and conditions</label>
+                <input type="checkbox" id="scales" name="scales" class="checkbox">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
