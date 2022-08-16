@@ -6,7 +6,6 @@ internal class Program
     {
         int MenuOptionChoice = -1;
         Student AlunoLocal;
-        Employee FuncionarioLocal;
         Course NossoCurso = new Course();
         Company NossaCia = new Company();
         
@@ -17,22 +16,22 @@ internal class Program
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.Clear();
             Console.Beep();
-            Console.WriteLine("Escolha uma opção:");
+            Console.WriteLine("Escolha uma opï¿½ï¿½o:");
             Console.WriteLine("\n-[ ALUNO ]-\n");
             Console.WriteLine("(1) Cadastrar aluno");
             Console.WriteLine("(2) Remover aluno");
             Console.WriteLine("(3) Atualizar cadastro aluno");
-            Console.WriteLine("(4) Lançar notas do aluno");
+            Console.WriteLine("(4) Lanï¿½ar notas do aluno");
             Console.WriteLine("(5) Listar notas do aluno");
-            Console.WriteLine("(6) Listar média das notas do aluno");
-            Console.WriteLine("(7) Mostrar situação do estágio do aluno");
-            Console.WriteLine("\n-[ FUNCIONÁRIO ]-\n");
-            Console.WriteLine("(8) Cadastrar funcionário");
-            Console.WriteLine("(9) Remover funcionário");
-            Console.WriteLine("(10) Atualizar cadastro funcionário");
-            Console.WriteLine("(11) Mostrar situação do estágio do funcionário");
+            Console.WriteLine("(6) Listar mï¿½dia das notas do aluno");
+            Console.WriteLine("(7) Mostrar situaï¿½ï¿½o do estï¿½gio do aluno");
+            Console.WriteLine("\n-[ FUNCIONï¿½RIO ]-\n");
+            Console.WriteLine("(8) Cadastrar funcionï¿½rio");
+            Console.WriteLine("(9) Remover funcionï¿½rio");
+            Console.WriteLine("(10) Atualizar cadastro funcionï¿½rio");
+            Console.WriteLine("(11) Mostrar situaï¿½ï¿½o do estï¿½gio do funcionï¿½rio");
             Console.WriteLine("\n-[ Inscritos ]-\n");
-            Console.WriteLine("(12) Listar todos os inscritos [ alunos e funcionários ]");
+            Console.WriteLine("(12) Listar todos os inscritos [ alunos e funcionï¿½rios ]");
             //Get out.
             Console.WriteLine("\n(13) Sair");
             //
@@ -46,21 +45,21 @@ internal class Program
                     AlunoLocal.Surname = "virgulino";
                     AlunoLocal.Phone = "5555-1111";
                     //
-                    Console.WriteLine($"Status Matrícula inicial: {NossoCurso.Register(AlunoLocal)}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine($"Status Matrï¿½cula inicial: {NossoCurso.Register(AlunoLocal)}");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 2:
                     //how to unique select with AlunoLocal must be removed?
-                    Console.WriteLine($"Status Remoção: {0}", NossoCurso.Remove(AlunoLocal));
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine($"Status Remoï¿½ï¿½o: {0}", NossoCurso.Remove(AlunoLocal));
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 3:
                     // how to unique select with AlunoLocal must be updated?
                     AlunoLocal.Update(AlunoLocal);
                     Console.WriteLine($"Update: {AlunoLocal.Name}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 4:
@@ -69,25 +68,25 @@ internal class Program
                     Console.WriteLine($"Status: {AlunoLocal.SetGrade(2, 8)}");
                     Console.WriteLine($"Status: {AlunoLocal.SetGrade(3, 9)}");
                     Console.WriteLine($"Status: {AlunoLocal.SetGrade(4, 7)}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 5:
                     // how to unique select with AlunoLocal must have Grades shown?
                     Console.WriteLine($"{AlunoLocal.Name} {AlunoLocal.Surname}:\n{AlunoLocal.ShowGrades()}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 6:
                     // how to unique select with AlunoLocal must have Grades Average shown?
-                    Console.WriteLine($"{AlunoLocal.Name} {AlunoLocal.Surname} => Média: {AlunoLocal.AverageGrade()}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine($"{AlunoLocal.Name} {AlunoLocal.Surname} => Mï¿½dia: {AlunoLocal.AverageGrade()}");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 7:
                     // how to unique select with AlunoLocal must have Status shown?
                     Console.WriteLine($"{AlunoLocal.Name} {AlunoLocal.Surname} => Status: {AlunoLocal.IsApproved()}");
-                    Console.WriteLine("Após ler as informações tecle <espaço>");
+                    Console.WriteLine("Apï¿½s ler as informaï¿½ï¿½es tecle <espaï¿½o>");
                     Console.ReadKey();
                     break;
                 case 8:
