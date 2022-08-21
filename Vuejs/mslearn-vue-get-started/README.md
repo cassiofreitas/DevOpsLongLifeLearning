@@ -1,3 +1,4 @@
+[My Badge in this tutorial](https://docs.microsoft.com/en-us/learn/achievements/learn.language.vue-dynamic-rendering.badge?username=cassiofreitas)
 
 # Contributing
 
