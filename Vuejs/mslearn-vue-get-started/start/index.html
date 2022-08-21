@@ -18,6 +18,13 @@
         <h2>{{ productName }}</h2>
         <div>{{ productDescription }}</div>
         <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
+
+        <div id="listaItens">
+            <ol>
+                <li v-for="(eachItem, indexKey) in itemsList" 
+                :key="indexKey">{{ eachItem }}</li>
+            </ol>
+        </div>
     </div>
 
     <!-- TODO: Import Vue app -->
