@@ -8,7 +8,27 @@ const app = Vue.createApp({
             productImageStyle: {
                 'border-radius': '15px'
             },
-            itemsList: ['Susan', 'Peter', 'Bill', 'Mark', 'John']
+            itemsList: ['Susan', 'Peter', 'Bill', 'Mark', 'John'],
+            productClasses: [
+                {
+                    name: 'Coach',
+                    price: 125000,
+                    seatsAvailable: 20,
+                    earlyBird: true
+                },
+                {
+                    name: 'Business',
+                    price: 275000,
+                    seatsAvailable: 6,
+                    earlyBird: true
+                },
+                {
+                    name: 'First',
+                    price: 430000,
+                    seatsAvailable: 2,
+                    earlyBird: false
+                }
+            ]
         }
     }
 });

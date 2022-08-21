@@ -8,17 +8,21 @@ body {
   font-size: 12px;
 }
 
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  vertical-align: middle;
+  margin: 5px;
+}
+
 .button {
-  margin: 14px;
   background-color: #39495c;
   border-radius: 5px;
-  font-size: 18px;
-  width: 160px;
-  height: 60px;
   color: white;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .cart {

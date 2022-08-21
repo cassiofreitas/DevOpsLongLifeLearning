@@ -17,12 +17,21 @@
     <div id="app">
         <h2>{{ productName }}</h2>
         <div>{{ productDescription }}</div>
-        <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
+        <hr />
 
+        <div v-for="(productClass, indexKey) in productClasses" :key="indexKey" class="row">
+            <div class="column">
+                {{ productClass.name }}
+            </div>
+            <div class="column">
+                $ {{ productClass.price.toLocaleString('en-US') }}
+            </div>
+        </div>
+        <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
+        <hr />
         <div id="listaItens">
             <ol>
-                <li v-for="(eachItem, indexKey) in itemsList" 
-                :key="indexKey">{{ eachItem }}</li>
+                <li v-for="(eachItem, indexKey) in itemsList" :key="indexKey">{{ eachItem }}</li>
             </ol>
         </div>
     </div>
