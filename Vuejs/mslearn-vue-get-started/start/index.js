@@ -28,6 +28,15 @@ const app = Vue.createApp({
                     seatsAvailable: 2,
                     earlyBird: false
                 }
+            ],
+            name: 'Cheryl',
+            status: -1,
+            active: true,
+            benefitsSelected: 'tue',
+            statusList: [
+                'full-time',
+                'part-time',
+                'contractor'
             ]
         }
     }

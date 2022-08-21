@@ -36,8 +36,7 @@
 
         <hr />
 
-        <div v-show="new Date().getMonth() > 3">
-            It is the first quarter = {{new Date().getMonth() > 3 }}</div>
+        <div v-show="new Date().getMonth() > 3">It is the first quarter = {{new Date().getMonth() > 3 }}</div>
 
         <div v-if="new Date().getMonth() < 3">It is the first quarter</div>
         <div v-else-if="new Date().getMonth() < 6">It is the second quarter</div>
@@ -51,6 +50,17 @@
                 <li v-for="(eachItem, indexKey) in itemsList" :key="indexKey">{{ eachItem }}</li>
             </ol>
         </div>
+
+        <hr />
+
+        <span>Binding to textboxes</span>
+        <input type="text" v-model="name" />
+        <button class="button">{{name}}</button>
+
+        <span>Binding to checkbox</span>
+        <input type="checkbox" v-model="active" />Is active
+        <input type="checkbox" v-model="benefitsSelected" true-value="yes" false-value="no" />Benefits selectd: {{benefitsSelected}}
+
     </div>
 
     <!-- TODO: Import Vue app -->
