@@ -26,9 +26,26 @@
             <div class="column">
                 $ {{ productClass.price.toLocaleString('en-US') }}
             </div>
+            <button v-if="productClass.earlyBird" class="button">Book early bird!</button>
+            <button v-else class="button">Book now!</button>
+
+            <div v-show="productClass.seatsAvailable < 10">Almost sold out!</div>
         </div>
+
         <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
+
         <hr />
+
+        <div v-show="new Date().getMonth() > 3">
+            It is the first quarter = {{new Date().getMonth() > 3 }}</div>
+
+        <div v-if="new Date().getMonth() < 3">It is the first quarter</div>
+        <div v-else-if="new Date().getMonth() < 6">It is the second quarter</div>
+        <div v-else-if="new Date().getMonth() < 9">It is the third quarter</div>
+        <div v-else>It is the fourth quarter</div>
+
+        <hr />
+
         <div id="listaItens">
             <ol>
                 <li v-for="(eachItem, indexKey) in itemsList" :key="indexKey">{{ eachItem }}</li>
