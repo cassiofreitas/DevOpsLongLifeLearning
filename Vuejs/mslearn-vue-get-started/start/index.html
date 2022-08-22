@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/styles.css" />
     <!-- TODO: Import Vue.js core library -->
     <script src="https://unpkg.com/vue@next"></script>
+    <!-- CSS only -->
 </head>
 
 <body>
@@ -34,33 +35,56 @@
 
         <img :src="productImage" :alt="productImageDescription" :style="productImageStyle" />
 
-        <hr />
+        <div class="mybox">
+            <h2>Conditionals</h2>
+            <div v-show="new Date().getMonth() > 3">It is the first quarter = {{new Date().getMonth() > 3 }}</div>
 
-        <div v-show="new Date().getMonth() > 3">It is the first quarter = {{new Date().getMonth() > 3 }}</div>
-
-        <div v-if="new Date().getMonth() < 3">It is the first quarter</div>
-        <div v-else-if="new Date().getMonth() < 6">It is the second quarter</div>
-        <div v-else-if="new Date().getMonth() < 9">It is the third quarter</div>
-        <div v-else>It is the fourth quarter</div>
-
-        <hr />
-
-        <div id="listaItens">
+            <div v-if="new Date().getMonth() < 3">It is the first quarter</div>
+            <div v-else-if="new Date().getMonth() < 6">It is the second quarter</div>
+            <div v-else-if="new Date().getMonth() < 9">It is the third quarter</div>
+            <div v-else>It is the fourth quarter</div>
+        </div>
+        <hr>
+        <div class="mybox" id="listaItens">
+            <h2>Items list</h2>
             <ol>
                 <li v-for="(eachItem, indexKey) in itemsList" :key="indexKey">{{ eachItem }}</li>
             </ol>
         </div>
-
-        <hr />
-
-        <span>Binding to textboxes</span>
-        <input type="text" v-model="name" />
-        <button class="button">{{name}}</button>
-
-        <span>Binding to checkbox</span>
-        <input type="checkbox" v-model="active" />Is active
-        <input type="checkbox" v-model="benefitsSelected" true-value="yes" false-value="no" />Benefits selectd: {{benefitsSelected}}
-
+        <hr>
+        <div class="mybox">
+            <h2>Binding to textboxes</h2>
+            <input type="text" v-model="name" />
+            <button class="button">{{name}}</button>
+        </div>
+        <hr>
+        <div class="mybox">
+            <p>Binding to checkbox</p>
+            <p><input type="checkbox" v-model="active" />Is active?</p>
+            <input type="checkbox" v-model="benefitsSelected" true-value="yes" false-value="no" />Benefits selected:
+            {{benefitsSelected}}
+        </div>
+        <hr>
+        <div class="mybox">
+            <form v-show="!booking.completed">
+                <h2>Book now!</h2>
+                <div class="row">
+                    <label for="product-cabin">Select class:</label>
+                    <select id="product-cabin" v-model="booking.cabinIndex">
+                        <option v-for="(cabin, index) in product.cabins" :value="index">
+                            {{ cabin.name }} $ {{ cabin.price.toLocaleString('en-US') }}
+                        </option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="notes">Notes:</label>
+                    <textarea v-model="booking.notes" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <!--TODO: Add button later -->
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- TODO: Import Vue app -->

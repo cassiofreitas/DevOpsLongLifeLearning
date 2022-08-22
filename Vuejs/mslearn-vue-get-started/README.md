@@ -1,5 +1,7 @@
 [My Badge in this tutorial](https://docs.microsoft.com/en-us/learn/achievements/learn.language.vue-dynamic-rendering.badge?username=cassiofreitas)
 
+[Continue from here 21/08/2022](https://docs.microsoft.com/en-us/learn/modules/vue-data-events/2-forms)
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
