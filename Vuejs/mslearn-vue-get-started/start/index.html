@@ -57,14 +57,13 @@
             <input type="text" v-model="name" />
             <button class="button">{{name}}</button>
         </div>
-        <hr>
+        <h3>Binding to checkbox</h3>
         <div class="mybox">
-            <p>Binding to checkbox</p>
-            <p><input type="checkbox" v-model="active" />Is active?</p>
+            <input type="checkbox" v-model="active" />Is active?
             <input type="checkbox" v-model="benefitsSelected" true-value="yes" false-value="no" />Benefits selected:
             {{benefitsSelected}}
         </div>
-        <hr>
+        <h3>Bind to data forms</h3>
         <div class="mybox">
             <form v-show="!booking.completed">
                 <h2>Book now!</h2>
@@ -80,14 +79,30 @@
                     <label for="notes">Notes:</label>
                     <textarea v-model="booking.notes" rows="3"></textarea>
                 </div>
+                <h3>Event handlers</h3>
                 <div class="row">
-                    <!--TODO: Add button later -->
+                    <button class="button" type="button" @click="bookCabin">Book Now!</button>
+                </div>
+                <div class="mybox">
+                    <button class="button" type="button" v-on:click="displayCabin(booking.notes)">Clique aqui
+                        uai</button>
                 </div>
             </form>
+            <h3>Booking status:</h3>
+            <div v-show="booking.completed">
+                <h2 class="row">
+                    You are on your way {{fullName}}!
+                </h2>
+                <div class="row">
+                    <div>Booking Details:</div>
+                    <div>{{ bookingCabinDisplay }}</div>
+                    <div>Notes: {{ booking.notes }}</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- TODO: Import Vue app -->
+    <!-- Import Vue app -->
     <script src="./index.js"></script>
 
 </body>

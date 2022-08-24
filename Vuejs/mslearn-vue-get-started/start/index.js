@@ -30,6 +30,8 @@ const app = Vue.createApp({
                 }
             ],
             name: 'Cheryl',
+            firstName: 'Marcy',
+            lastName: 'Sophy',
             status: -1,
             active: false,
             benefitsSelected: 'yes',
@@ -57,6 +59,25 @@ const app = Vue.createApp({
                 notes: '',
                 completed: false
             }
+        }
+    },
+
+    methods: {
+        displayCabin(message) {
+            alert(message);
+        },
+        bookCabin() {
+            this.booking.completed = true;
+        }
+    },
+
+    computed: {
+        fullName() {
+            return `${this.lastName}, ${this.firstName}`
+        },
+        bookingCabinDisplay() {
+            const cabin = this.product.cabins[this.booking.cabinIndex];
+            return `${cabin.name}: $ ${cabin.price.toLocaleString('en-US')}`;
         }
     }
 });
