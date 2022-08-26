@@ -11,11 +11,12 @@
             <div class="row">
                 <div>
                     <!-- TODO: Add booking-form -->
+                    <booking-form @booking-created="addBooking" :cabins="cruise.cabins"></booking-form>
 
                 </div>
                 <div>
                     <!-- TODO: Add booking-list -->
-                <booking-list :bookings="bookings"></booking-list>
+                    <booking-list :bookings="bookings"></booking-list>
 
                 </div>
             </div>
@@ -25,6 +26,7 @@
 
 <script>
 import BookingList from './BookingList.vue';
+import BookingForm from './BookingForm.vue';
 // TODO: register next component
 
 export default {
@@ -41,8 +43,7 @@ export default {
                 ]
             },
             bookings: [
-                { name: 'Sample', price: 5000 },
-                { name: 'Master', price: 15000 },
+                { name: 'Sample', price: 0 },
             ]
         }
     },
@@ -50,9 +51,20 @@ export default {
     //TODO: Add components
     components: {
         BookingList,
+        BookingForm,
         // TODO: Add next component
     },
 
+    methods: {
+        addBooking(cabinIndex) {
+            const cabin = this.cruise.cabins[cabinIndex];
+            const booking = {
+                cabin: cabin.name,
+                price: cabin.price
+            }
+            this.bookings.push(booking);
+        }
+    }
     //TODO: Add methods
 }
 </script>
