@@ -29,20 +29,29 @@
 <body>
   <h1>JavaScript ES6 elements</h1>
 
-  <div class="container">
+  <div onload class="container">
     <div id="square"></div>
     <div id="meuconsole"></div>
+    <div id="botoes" class="umgrid">
+      <button type="button" onclick="doDemo(this);">Click Me</button>
+      <button type="button" onclick="showMyData(this);">Show My Data</button>
+      <button type="button" onclick="challengeOne(this);">Challenge One</button>
+      <button id="pedroFala" type="button" onclick="pedro.falar('Oi, tudo joia?')" ;>Pedro diz:</button>
+      <button id="classeTelha" type="button" onclick="getTelhaData(telha);">Dados da telha</button>
+      <button type="button" onclick="thisIsHoisting();">O tal de Hoisting</button>
+      <button type="button" onclick="oTalDeCallBackFunction();">oTalDeCallBackFunction</button>
+      <button type="button" onclick="oTalDeDestructuring();">oTalDeDestructuring</button>
+      <button onmouseout="exerciciosMDN(0);" type="button" onclick="exerciciosMDN(1);">
+        exerciciosMDN
+      </button>
+    </div>
+    <div id="botoesNovos" class="umgrid">
+      <button id="xhr">Click to start request</button>
+      <button id="reload">Reload</button>
+
+      <pre readonly class="event-log"></pre>
+    </div>
   </div>
-
-  <button type="button" onclick="doDemo(this);">Click Me</button>
-  <button type="button" onclick="showMyData(this);">Show My Data</button>
-  <button type="button" onclick="challengeOne(this);">Challenge One</button>
-  <button id="pedroFala" type="button" onclick="pedro.falar('Oi, tudo joia?')" ;>Pedro diz:</button>
-  <button id="classeTelha" type="button" onclick="getTelhaData(telha);">Dados da telha</button>
-  <button type="button" onclick="thisIsHoisting();">O tal de Hoisting</button>
-  <button type="button" onclick="oTalDeCallBackFunction();">oTalDeCallBackFunction</button>
-  <button type="button" onclick="oTalDeDestructuring();">oTalDeDestructuring</button>
-
 </body>
 
 </html>
